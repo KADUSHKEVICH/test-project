@@ -1,0 +1,69 @@
+@import "./index.css";
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    box-sizing: border-box;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.descr_wrapp {
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 94px;
+}
+.comm_wrapp {
+    width: 500px;
+    height: 64px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .descr_wrapp {
+        max-width: 400px;
+    }
+    .comm_wrapp {
+        width: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .descr_wrapp {
+        order: 1;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+    .comm_wrapp {
+        position: static;
+        order: 3;
+        width: 100%;
+    }
+    .list_wrapp {
+        order: 2;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+@media (max-width: 425px) {
+    .wrapper {
+        margin: 0 15px;
+    }
+}

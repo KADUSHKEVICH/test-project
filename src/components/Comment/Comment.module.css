@@ -1,0 +1,40 @@
+.comment {
+    display: flex;
+    align-items: center;
+}
+.wrapper {
+    width: 100%;
+    padding: 20px 25px;
+    border-radius: 12px;
+    background: #191B20;
+    position: relative;
+}
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 7px);
+    left: -7px;
+    width: 7px;
+    height: 14px;
+    background-image: url('../../assets/icons/comment-icon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+    }
+}
+@media (max-width: 425px) {
+    .text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}

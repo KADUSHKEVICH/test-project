@@ -1,0 +1,54 @@
+@import "./index.css";
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    box-sizing: border-box;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 25px;
+    display: grid;
+    grid-template-areas: 
+    'descr list'
+    'comment list';
+    grid-row-gap: 30px;
+    grid-column-gap: 150px;
+}
+.descr_wrapp {
+    grid-area: descr;
+}
+.comm_wrapp {
+    grid-area: comment;
+}
+.list_wrapp {
+    grid-area: list;
+    display: grid;
+    align-content: center;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        grid-column-gap: 100px;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-areas: 
+        'descr'
+        'list'
+        'comment';
+        grid-column-gap: 50px;
+    }
+}
+@media (max-width: 425px) {
+    .wrapper {
+        margin: 0 15px;
+    }
+}

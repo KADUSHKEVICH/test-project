@@ -1,0 +1,26 @@
+@import './font.css';
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: grid;
+    grid-gap: 25px;
+    justify-content: center;
+    align-content: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    transition: linear 200ms;
+}
+.link:hover {
+    opacity: .5;
+}
