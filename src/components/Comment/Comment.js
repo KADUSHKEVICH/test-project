@@ -2,7 +2,7 @@ import * as React from "react"
 import * as s from "./Comment.module.css"
 import Avatar from "./Avatar/Avatar"
 
-const Comment = ({className}) => {
+export const Comment = ({className}) => {
     return (
         <div className={`${s.comment} ${className}`}>
             <Avatar/>
@@ -12,5 +12,3 @@ const Comment = ({className}) => {
         </div>
     )
 }
-
-export default Comment

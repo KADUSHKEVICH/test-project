@@ -1,8 +1,9 @@
 import * as React from "react"
 // components
-import Description from "../components/Description/Description"
-import List from "../components/List/List" 
-import Comment from "../components/Comment/Comment"
+// import Description from "../components/Description/Description"
+// import List from "../components/List/List" 
+// import Comment from "../components/Comment/Comment"
+import { Description, List, Comment } from "../components"
 // main styles
 import * as s from '../styles/page-1.module.css'
 

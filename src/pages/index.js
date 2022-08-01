@@ -7,13 +7,13 @@ import "../styles/index.css"
 const IndexPage = () => {
     return (
         <div className="App">
-            <Link 
+            <Link
                 to="/page-1"
                 className="link"
             >
                 Page-1
             </Link>
-            <Link 
+            <Link
                 to="/page-2"
                 className="link"
             >

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as s from './Description.module.css'
 
-const Description = ({className}) => {
+export const Description = ({className}) => {
     return (
         <div className={`${s.description} ${className}`}>
             <h1 className={s.title}>Enable rock-solid uploads at lightspeed</h1>  
@@ -9,5 +9,3 @@ const Description = ({className}) => {
         </div>
     )
 }
-
-export default Description
