@@ -10,9 +10,9 @@ const listItems = [
     {key: 6, value: 'Up to 5 TB file size'}
 ]
 
-const List = () => {
+const List = ({className}) => {
     return (
-        <ul className={s.list}>
+        <ul className={`${s.list} ${className}`}>
             {listItems.map(item => <li key={item.key} className={s.item}>{item.value}</li>)}
         </ul>
     )

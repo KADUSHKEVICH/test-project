@@ -10,15 +10,9 @@ const Page2 = () => {
     return (
         <main className={s.page}>
             <div className={s.wrapper}>
-                <div className={s.descr_wrapp}>
-                    <Description/>
-                </div>
-                <div className={s.comm_wrapp}>
-                    <Comment/>
-                </div>
-                <div className={s.list_wrapp}>
-                    <List/>
-                </div>
+                <Description className={s.descr_wrapp}/>
+                <Comment className={s.comm_wrapp}/>
+                <List className={s.list_wrapp}/>
             </div>
         </main>
     )

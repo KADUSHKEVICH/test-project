@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import "normalize.css"
 import "reset-css"
-import '../styles/index.css'
+import "../styles/index.css"
 
 const IndexPage = () => {
     return (
