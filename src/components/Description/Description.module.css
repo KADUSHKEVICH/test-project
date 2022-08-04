@@ -1,6 +1,7 @@
 .description {
     display: grid;
     grid-gap: 25px;
+    align-self: start;
 }
 .title {
     font-size: 32px;

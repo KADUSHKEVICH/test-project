@@ -1,6 +1,6 @@
 .comment {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 .wrapper {
     width: 100%;

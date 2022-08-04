@@ -1,19 +1,31 @@
 import * as React from "react"
-// components
 import { Description, List, Comment } from "../components"
-// main styles
+import { useWindowWidth } from "../shared"
 import * as s from '../styles/page-1.module.css'
 
 const Page1 = () => {
-  return (
-    <main className={s.page}>
-      <div className={s.wrapper}>
-      <Description className={s.descr_wrapp}/>
-      <Comment className={s.comm_wrapp}/>
-      <List className={s.list_wrapp}/>
-      </div>
-    </main>
-  )
-}
+    // присваиваю результат ф-ии, которая возвращает размер ширины, переменной size
+    const size = useWindowWidth()
+    // переменная для хранения значения мобильного/десктопного режима
+    let isMobile = false
+    // условие для определения мобильного/десктопного режима (отрисовка коментария)
+    size.width <= 768 ? isMobile = true : isMobile = false
 
+    return (
+        <main className={s.page}>
+            <div className={s.wrapper}>
+                <div className={s.left_side}>
+                    <Description/>
+                    {!isMobile && <Comment/>}
+                </div>
+                <div className={s.right_side}>
+                    <List className={s.list_wrapp}/>
+                    {isMobile && <Comment/>}
+                </div>
+            </div>
+        </main>
+    )
+    
+}
 export default Page1
+  
