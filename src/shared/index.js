@@ -1,1 +1,1 @@
-export * from "./WindowWidthHook"
+export * from "./UseIsMobile"

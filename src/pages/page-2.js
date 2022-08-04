@@ -1,14 +1,11 @@
 import * as React from "react"
 import { Description, List, Comment } from "../components"
-import { useWindowWidth } from "../shared"
+import { useIsMobile } from "../shared"
 import * as s from '../styles/page-2.module.css'
 
 const Page2 = () => {
 
-    const size = useWindowWidth()
-
-    let isMobile = false
-    size.width <= 768 ? isMobile = true : isMobile = false
+    const isMobile = useIsMobile()
 
     return (
         <main className={s.page}>
