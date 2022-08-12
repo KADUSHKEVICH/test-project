@@ -1,15 +1,15 @@
 import * as React from "react"
-import { Description, List, Comment } from "../components"
+import { Layout, Container, Description, List, Comment } from "../components"
 import { useIsMobile } from "../shared"
-import * as s from '../styles/page-1.module.css'
+import * as s from "../styles/page-1.module.css"
 
 const Page1 = () => {
 
     const isMobile = useIsMobile()
 
     return (
-        <main className={s.page}>
-            <div className={s.wrapper}>
+        <Layout className={s.layout}>
+            <Container className={s.container}>
                 <div className={s.left_side}>
                     <Description/>
                     {!isMobile && <Comment/>}
@@ -18,10 +18,11 @@ const Page1 = () => {
                     <List className={s.list_wrapp}/>
                     {isMobile && <Comment/>}
                 </div>
-            </div>
-        </main>
+            </Container>
+        </Layout>
     )
     
 }
+
 export default Page1
   
