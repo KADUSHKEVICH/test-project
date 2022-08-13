@@ -18,30 +18,31 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 8px;
+    grid-row-gap: 30px;
     grid-template-areas: 
-    "left left left left . right right right";
+    "d d d d . l l l"
+    "c c c c . l l l"
+    ". . . . . l l l";
 }
 
-.left_side {
-    grid-area: left;
-    display: grid;
-    grid-row-gap: 30px;
-    align-self: start;
+.descr_wrapp {
+    grid-area: d;
 }
-.right_side {
-    grid-area: right;
-    justify-self: end;
+.comment_wrapp {
+    grid-area: c;
+}
+.list_wrapp {
+    grid-area: l;
 }
 
 @media (max-width: 768px) {
     .container {
-        display: block;
-    }
-    .left_side {
-        margin-bottom: 30px;
-    }
-    .list_wrapp {
-        margin-bottom: 30px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "d"
+        "l"
+        "c";
+        grid-gap: 30px;
     }
 }
 @media (max-width: 425px) {
