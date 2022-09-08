@@ -1,6 +1,6 @@
 @import "./index.css";
 
-.page {
+.layout {
     width: 100vw;
     height: 100vh;
     color: #fff;
@@ -9,61 +9,62 @@
     justify-content: center;
     align-items: center;
 }
-.wrapper {
+
+.container {
     box-sizing: border-box;
     max-width: 1000px;
     width: 100%;
     margin: 0 25px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     position: relative;
+}
+
+.left_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.right_side {
+    margin-left: 50px;
 }
 .descr_wrapp {
     max-width: 500px;
     width: 100%;
-    margin-bottom: 94px;
+    margin-bottom: 30px;
 }
 .comm_wrapp {
-    width: 500px;
-    height: 64px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    max-width: 500px;
+    width: 100%;
+    min-height: 64px;
 }
 
-@media (max-width: 900px) {
-    .descr_wrapp {
-        max-width: 400px;
-    }
-    .comm_wrapp {
-        width: 400px;
-    }
-}
 @media (max-width: 768px) {
-    .wrapper {
+    .container {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
+    .right_side {
+        width: 100%;
+        margin-left: 0;
+    }
     .descr_wrapp {
-        order: 1;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .comm_wrapp {
+        max-width: 100%;
+        height: auto;
+    }
+    .list_wrapp {
         margin-bottom: 30px;
         max-width: 100%;
     }
-    .comm_wrapp {
-        position: static;
-        order: 3;
-        width: 100%;
-    }
-    .list_wrapp {
-        order: 2;
-        margin-bottom: 30px;
-        width: 100%;
-    }
 }
 @media (max-width: 425px) {
-    .wrapper {
+    .container {
         margin: 0 15px;
     }
 }

@@ -1,6 +1,6 @@
 @import "./index.css";
 
-.page {
+.layout {
     width: 100vw;
     height: 100vh;
     color: #fff;
@@ -9,46 +9,44 @@
     justify-content: center;
     align-items: center;
 }
-.wrapper {
+
+.container {
     box-sizing: border-box;
     max-width: 1000px;
     width: 100%;
     margin: 0 25px;
     display: grid;
-    grid-template-areas: 
-    'descr list'
-    'comment list';
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 8px;
     grid-row-gap: 30px;
-    grid-column-gap: 150px;
-}
-.descr_wrapp {
-    grid-area: descr;
-}
-.comm_wrapp {
-    grid-area: comment;
-}
-.list_wrapp {
-    grid-area: list;
-    display: grid;
-    align-content: center;
+    grid-template-areas: 
+    "d d d d . l l l"
+    "c c c c . l l l"
+    ". . . . . l l l";
 }
 
-@media (max-width: 1024px) {
-    .wrapper {
-        grid-column-gap: 100px;
-    }
+.descr_wrapp {
+    grid-area: d;
 }
+.comment_wrapp {
+    grid-area: c;
+}
+.list_wrapp {
+    grid-area: l;
+}
+
 @media (max-width: 768px) {
-    .wrapper {
+    .container {
+        grid-template-columns: 1fr;
         grid-template-areas: 
-        'descr'
-        'list'
-        'comment';
-        grid-column-gap: 50px;
+        "d"
+        "l"
+        "c";
+        grid-gap: 30px;
     }
 }
 @media (max-width: 425px) {
-    .wrapper {
+    .container {
         margin: 0 15px;
     }
 }

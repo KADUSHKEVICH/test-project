@@ -2,9 +2,9 @@ import * as React from "react"
 import * as s from "./Comment.module.css"
 import Avatar from "./Avatar/Avatar"
 
-const Comment = () => {
+export const Comment = ({className}) => {
     return (
-        <div className={s.comment}>
+        <div className={`${s.comment} ${className}`}>
             <Avatar/>
             <div className={s.wrapper}>
                 <p className={s.text}>In-house file infrastructure? No thank you.</p>
@@ -12,5 +12,3 @@ const Comment = () => {
         </div>
     )
 }
-
-export default Comment
